@@ -1,4 +1,15 @@
+
+
 const API_URL = 'https://djangotarefas-production.up.railway.app/api/tarefas'
+fetch('https://djangotarefas-production.up.railway.app/api/tarefas', {
+  mode: 'no-cors'
+})
+  .then(response => {
+    // Lidar com a resposta (observe que você não terá acesso ao corpo da resposta)
+  })
+  .catch(error => {
+    // Lidar com o erro
+  });
 
 
 async function obterTarefas() {
