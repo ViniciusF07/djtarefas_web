@@ -32,6 +32,7 @@ async function criarTarefa() {
       document.getElementById('responsavel').value = '';
       mostrarTarefas()
       console.log("Tarefa criada com sucesso")
+      console.log(response.status)
   }else{
       console.log("!!ERRO!!")
   }
