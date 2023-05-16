@@ -23,7 +23,7 @@ async function criarTarefa() {
     prioridade: parseInt(prioridade)
   };
 
-  const response = await fetch(URL, {
+  const response = await fetch(`${URL}`, {
       method: 'POST',
       body: JSON.stringify(novaTarefa)
   });
@@ -97,7 +97,7 @@ async function apagarTarefa(id) {
   });
   
   if (confirmacao.isConfirmed) {
-    const response = await fetch(`${'URL'}/${id}`, {
+    const response = await fetch(`${URL}/${id}`, {
       method: 'DELETE',
     });
 
