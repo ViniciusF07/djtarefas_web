@@ -2,9 +2,9 @@ const URL = "djangotarefas-production.up.railway.app/api/tarefas"
 
 
 async function obterTarefas() {
-  const response = await fetch(URL);
+  const response = await fetch('djangotarefas-production.up.railway.app/api/tarefas');
   const data = await response.json();
-  console.log(URL)
+  console.log('djangotarefas-production.up.railway.app/api/tarefas')
   return data;
 }
 
@@ -23,7 +23,7 @@ async function criarTarefa() {
     prioridade: parseInt(prioridade)
   };
 
-  const response = await fetch(`${URL}`, {
+  const response = await fetch('djangotarefas-production.up.railway.app/api/tarefas', {
       method: 'POST',
       body: JSON.stringify(novaTarefa)
   });
@@ -97,7 +97,7 @@ async function apagarTarefa(id) {
   });
   
   if (confirmacao.isConfirmed) {
-    const response = await fetch(`${URL}/${id}`, {
+    const response = await fetch(`${'djangotarefas-production.up.railway.app/api/tarefas'}/${id}`, {
       method: 'DELETE',
     });
 
