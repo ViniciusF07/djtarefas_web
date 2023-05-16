@@ -1,4 +1,4 @@
-const URL = 'djangotarefas-production.up.railway.app/api/tarefas'
+const URL = "djangotarefas-production.up.railway.app/api/tarefas"
 
 
 async function obterTarefas() {
