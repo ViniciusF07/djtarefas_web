@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet" />
+  <script defer src="script.js"></script>
+
+  
+
+  <title>(EM PROGRESSO) Formulário</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Criar tarefa</h2>
+    </div>
+
+    <form class="form">
+      <div>
+        <div class="form-control">
+          <label for="responsavel">Responsavel</label>
+          <input id="responsavel" type="text" placeholder="Digite o nome do responsavel" />
+        </div>
+        <div class="form-control">
+          <label for="situacao">Situação</label>
+          <select id="situacao" type="text" placeholder="Digite a situação da tarefa">
+            <option value="NOVA">NOVA</option>
+            <option value="EM ANDAMENTO">EM ANDAMENTO</option>
+            <option value="PENDENTE">PENDENTE</option>     
+            <option value="RESOLVIDA">RESOLVIDA</option> 
+          </select> 
+        </div>
+
+        <div class="form-control">
+          <label for="nivel">Nível</label>
+          <select id="nivel" type="number" placeholder="Digite o Nível da tarefa">
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="8">8</option>     
+          </select>
+           
+        </div>
+
+        <div class="form-control">
+          <label for="prioridade">Prioridade</label>
+          <select id="prioridade" type="number" placeholder="Digite a Prioridade da tarefa"> 
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+
+        <div class="form-control">
+          <label for="descricao">Descrição</label>
+          <input id="descricao" type="text" placeholder="Digite a descrição da tarefa" />
+
+        </div>
+        <button type="button" onclick="criarTarefa()">Criar Tarefa</button>
+        <button type="button" onclick="mostrarTarefas()">Mostrar Tarefas</button>
+      </div>
+    </form>
+    <table id="tabela-tarefas"></table>
+    <div id="formulario"></div>
+  </div>
+
+
+   
+
+  <script src="https://kit.fontawesome.com/f9e19193d6.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
