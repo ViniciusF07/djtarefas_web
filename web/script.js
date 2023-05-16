@@ -13,7 +13,15 @@ fetch('https://djangotarefas-production.up.railway.app/api/tarefas', {
 
 
 async function obterTarefas() {
-  const response = await fetch(API_URL);
+  const response = await fetch('https://djangotarefas-production.up.railway.app/api/tarefas', {
+  mode: 'no-cors'
+})
+  .then(response => {
+    // Lidar com a resposta (observe que você não terá acesso ao corpo da resposta)
+  })
+  .catch(error => {
+    // Lidar com o erro
+  });
   const data = await response.json();
   return data;
 }
