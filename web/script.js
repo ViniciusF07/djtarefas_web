@@ -4,7 +4,6 @@ const URL = "djangotarefas-production.up.railway.app/api/tarefas"
 async function obterTarefas() {
   const response = await fetch('djangotarefas-production.up.railway.app/api/tarefas');
   const data = await response.json();
-  console.log('djangotarefas-production.up.railway.app/api/tarefas')
   return data;
 }
 
