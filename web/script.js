@@ -22,8 +22,11 @@ async function criarTarefa() {
     prioridade: parseInt(prioridade)
   };
 
-  const response = await fetch('djangotarefas-production.up.railway.app/api/tarefas', {
+  const response = await fetch(API_URL, {
       method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
       body: JSON.stringify(novaTarefa)
   });
   if (response.status === 201) {
