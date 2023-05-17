@@ -1,8 +1,8 @@
-const URL = "djangotarefas-production.up.railway.app/api/tarefas"
+const URL = "https://djangotarefas-production.up.railway.app/api/tarefas"
 
 
 async function obterTarefas() {
-  const response = await fetch('djangotarefas-production.up.railway.app/api/tarefas');
+  const response = await fetch(URL);
   const data = await response.json();
   return data;
 }
@@ -22,7 +22,7 @@ async function criarTarefa() {
     prioridade: parseInt(prioridade)
   };
 
-  const response = await fetch(API_URL, {
+  const response = await fetch(URL, {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
